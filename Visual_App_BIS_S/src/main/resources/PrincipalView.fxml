@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:controller="controller.PrincipalViewController"
+            maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1">
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <Pane prefHeight="148.0" prefWidth="200.0" style="-fx-background-color: #c7f9cc;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutY="37.0" prefHeight="37.0" prefWidth="200.0" style="-fx-background-color: #22577a;">
+               <children>
+                  <Button fx:id="btn_Bubble" mnemonicParsing="false" text="Bubble" />
+                  <Button fx:id="btn_Selection" mnemonicParsing="false" text="Selection" />
+                  <Button fx:id="btn_Insertion" mnemonicParsing="false" text="Insertion" />
+               </children>
+            </HBox>
+            <Pane layoutY="107.0" prefHeight="224.0" prefWidth="200.0" style="-fx-background-color: #38a3a5;">
+               <children>
+                  <TextArea fx:id="txtBox_Datos" layoutX="6.0" layoutY="8.0" prefHeight="211.0" prefWidth="187.0" />
+               </children>
+            </Pane>
+            <Pane layoutY="352.0" prefHeight="39.0" prefWidth="200.0" style="-fx-background-color: #57cc99;">
+               <children>
+                  <Button fx:id="btn_Comenzar" layoutX="60.0" layoutY="7.0" mnemonicParsing="false" text="COMENZAR" />
+               </children>
+            </Pane>
+            <Text layoutX="4.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccione un tipo de ordenamineto" />
+            <Text layoutX="14.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Ingrese los datos:" />
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #38a3a5;" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="txtBox_Ordenar" layoutX="14.0" layoutY="14.0" prefHeight="375.0" prefWidth="370.0" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
+</BorderPane>
