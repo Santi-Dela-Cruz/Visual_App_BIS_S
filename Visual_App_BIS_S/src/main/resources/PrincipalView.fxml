@@ -7,12 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:controller="controller.PrincipalViewController"
-            maxHeight="-Infinity" maxWidth="-Infinity"
-            minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="400.0" prefWidth="600.0"
-            xmlns="http://javafx.com/javafx/23.0.1"
-            xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PrincipalViewController">
 
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
@@ -44,7 +39,8 @@
    <center>
       <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #38a3a5;" BorderPane.alignment="CENTER">
          <children>
-            <TextArea fx:id="txtBox_Ordenar" layoutX="14.0" layoutY="14.0" prefHeight="375.0" prefWidth="370.0" />
+            <TextArea fx:id="txtBox_Ordenar" layoutX="14.0" layoutY="276.0" prefHeight="113.0" prefWidth="370.0" />
+               <Pane fx:id="paneVisual" layoutX="14.0" layoutY="14.0" prefHeight="251.0" prefWidth="371.0" style="-fx-background-color: #f6f1d1;" />
          </children>
       </Pane>
    </center>
