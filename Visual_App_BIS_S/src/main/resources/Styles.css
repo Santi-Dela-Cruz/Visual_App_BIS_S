@@ -1,0 +1,383 @@
+.retro-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #00ffaa;
+    -fx-font-family: "Segoe UI", "Consolas", "Courier New", monospace;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    /*-fx-padding: 10 24;*/
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-border-color: #00ffaa;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, #00ffaa, 18, 0.6, 0, 0);
+    -fx-cursor: hand;
+}
+
+.retro-btn:selected, .retro-btn:selected:focused, .retro-btn.selected {
+    -fx-background-color: #00ffaa;
+    -fx-text-fill: #0d0d0d;
+    -fx-effect: dropshadow(gaussian, #00ffaa, 20, 0.7, 0, 0);
+}
+
+
+/* ========================= BUBBLE SORT ========================= */
+.BubbleSort-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI", "Consolas", "Courier New", monospace;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-border-color: #4361ee;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, #4361ee, 18, 0.6, 0, 0);
+    -fx-cursor: hand;
+}
+
+.BubbleSort-btn:selected,
+.BubbleSort-btn:selected:focused,
+.BubbleSort-btn.selected {
+    -fx-background-color: #4361ee;
+    -fx-text-fill: #0d0d0d;
+    -fx-effect: dropshadow(gaussian, #4361ee, 15, 0.7, 0, 0);
+}
+
+
+/* ========================= SELECTION SORT ========================= */
+.SelectionSort-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI", "Consolas", "Courier New", monospace;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-border-color: #ffea00;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, #ffea00, 18, 0.6, 0, 0);
+    -fx-cursor: hand;
+}
+
+.SelectionSort-btn:selected,
+.SelectionSort-btn:selected:focused,
+.SelectionSort-btn.selected {
+    -fx-background-color: #ffea00;
+    -fx-text-fill: #0d0d0d;
+    -fx-effect: dropshadow(gaussian, #ffea00, 15, 0.7, 0, 0);
+}
+
+
+/* ========================= INSERTION SORT ========================= */
+.InsertionSort-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI", "Consolas", "Courier New", monospace;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-border-color: #f72585;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, #f72585, 18, 0.6, 0, 0);
+    -fx-cursor: hand;
+}
+
+.InsertionSort-btn:selected,
+.InsertionSort-btn:selected:focused,
+.InsertionSort-btn.selected {
+    -fx-background-color: #f72585;
+    -fx-text-fill: #0d0d0d;
+    -fx-effect: dropshadow(gaussian, #f72585, 15, 0.7, 0, 0);
+}
+
+
+
+
+/* Panel redondeado sin bordes negros */
+.pane-rounded {
+    -fx-background-color: transparent;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.08), 10, 0.3, 0, 0);
+}
+
+/* Neon background for panels */
+.neon-pane {
+    /*-fx-background-color: #0d0d0d;*/
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+    -fx-border-color: #00ffaa;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, #00ffaa, 18, 0.4, 0, 0);
+    -fx-padding: 15;
+}
+
+.neon-pane-green {
+    -fx-background-color: rgba(0, 60, 40, 0.45); /* verde oscuro translúcido */
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+    -fx-border-color: #c7f9cc;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, #c7f9cc, 18, 0.4, 0, 0);
+    -fx-padding: 15;
+}
+
+
+
+
+.neon-pane-blue {
+    -fx-background-color: rgba(5, 25, 50, 0.45); /* azul petróleo translúcido */
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+    -fx-border-color: #4cc9f0;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, #4cc9f0, 18, 0.5, 0, 0);
+    -fx-padding: 15;
+}
+
+
+
+
+.neon-pane-purple {
+    -fx-background-color: rgba(40, 0, 60, 0.45); /* morado oscuro translúcido */
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+    -fx-border-color: #a64dff;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, #a64dff, 18, 0.5, 0, 0);
+    -fx-padding: 15;
+}
+
+
+
+
+.neon-pane-pink {
+    -fx-background-color: rgba(60, 0, 30, 0.45); /* púrpura oscuro translúcido */
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+    -fx-border-color: #ff4d6d;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, #ff4d6d, 18, 0.5, 0, 0);
+    -fx-padding: 15;
+}
+
+
+
+
+
+/* Border glow */
+.panel-neon-glow {
+    -fx-background-color: #0d0d0d;
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+    -fx-border-color: linear-gradient(to right, #6c63ff, #a64dff);
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, #6c63ff, 20, 0.3, 0, 0);
+    -fx-padding: 20;
+}
+
+/* Botón COMENZAR estilo neón */
+.retro-btn-comenzar {
+    -fx-background-color: transparent;
+    -fx-text-fill: #00ffaa;
+    -fx-font-family: "Segoe UI", "Consolas", "Courier New", monospace;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    /*-fx-padding: 10 24;*/
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-border-color: #00ffaa;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, #00ffaa, 18, 0.6, 0, 0);
+    -fx-cursor: hand;
+}
+
+/* Efecto al seleccionar o pulsar */
+.retro-btn-comenzar:selected, .retro-btn-comenzar:selected:focused, .retro-btn-comenzar.selected {
+    -fx-background-color: #00ffaa;
+    -fx-text-fill: #0d0d0d;
+    -fx-effect: dropshadow(gaussian, #00ffaa, 20, 0.7, 0, 0);
+}
+
+
+/* TextArea redondeado con efecto neón */
+.textarea-rounded {
+    -fx-background-color: transparent;
+    -fx-control-inner-background: #10002b; /* Fondo muy oscuro */
+    -fx-highlight-fill: #444;
+    -fx-highlight-text-fill: white;
+    -fx-text-fill: white;
+
+    -fx-font-family: "Segoe UI", monospace;
+    -fx-font-size: 12px;
+
+    /* Redondeo y borde brillante */
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #9d4edd; /* Morado más claro y brillante */
+    -fx-border-width: 1.2;
+    -fx-background-insets: 0;
+    -fx-padding: 6;
+
+    /* Glow más intenso */
+    -fx-effect: dropshadow(gaussian, #c77dff, 12, 0.6, 0, 0);
+}
+.textarea-rounded .scroll-bar:vertical,
+.textarea-rounded .scroll-bar:horizontal {
+    -fx-background-color: #181a26;         /* Línea oscura */
+    -fx-pref-width: 5px;
+}
+
+.textarea-rounded .scroll-bar .thumb {
+    -fx-background-color: #c77dff;         /* Pelotita más brillante */
+    -fx-background-radius: 5;
+    -fx-background-insets: 2;
+}
+
+
+
+
+/*.textarea-rounded .scroll-bar .thumb:hover {
+    -fx-background-color: #a28bff;
+}*/
+
+
+
+
+.text-neon {
+    -fx-text-fill: #ffea00;
+    -fx-font-family: "Segoe UI", "Consolas", "Courier New", monospace;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, #ffea00, 12, 0.6, 0, 0);
+}
+
+
+.neon-block {
+    -fx-background-color: rgba(0, 60, 40, 0.45); /* dark green, semi-transparent */
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #00ffaa;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, #00ffaa, 18, 0.4, 0, 0);
+    -fx-padding: 0;
+    -fx-alignment: center;
+}
+
+.neon-block-orange {
+    -fx-background-color: rgba(255, 179, 0, 0.45); /* orange, semi-transparent */
+    -fx-border-color: #ffb300;
+    -fx-effect: dropshadow(gaussian, #ffb300, 18, 0.4, 0, 0);
+}
+
+.neon-block-done {
+    -fx-background-color: rgba(0, 60, 40, 1.0); /* dark green, fully opaque */
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #00ffaa;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, #00ffaa, 18, 0.4, 0, 0);
+}
+
+
+/* ========================= BUTTONS WITH SHAPES ========================= */
+        .btn-yellow {
+            -fx-background-color: radial-gradient(center 50% 50%, radius 70%, #fff200, #ffd700);
+            -fx-border-color: #ffeb3b;
+            -fx-border-width: 2;
+            -fx-background-radius: 25;
+            -fx-border-radius: 10;
+            -fx-shape: "M0,25 a25,25 0 1,0 50,0 a25,25 0 1,0 -50,0";
+            -fx-effect: dropshadow(gaussian, #ffd700, 10, 0.6, 0, 0);
+            -fx-cursor: hand;
+            -fx-padding: 0;
+            -fx-min-width: 50;
+            -fx-min-height: 50;
+            -fx-pref-width: 50;
+            -fx-pref-height: 50;
+            -fx-max-width: 50;
+            -fx-max-height: 50;
+        }
+        .btn-yellow:pressed {
+            -fx-background-color: #ffeb3b;
+            -fx-effect: dropshadow(gaussian, #ffd700, 15, 0.7, 0, 0);
+        }
+
+        /* 🟢 Green */
+        .btn-green {
+            -fx-background-color: radial-gradient(center 50% 50%, radius 70%, #00ff99, #00cc66);
+            -fx-border-color: #00ffaa;
+            -fx-border-width: 2;
+            -fx-background-radius: 25;
+            -fx-border-radius: 10;
+            -fx-shape: "M0,25 a25,25 0 1,0 50,0 a25,25 0 1,0 -50,0";
+            -fx-effect: dropshadow(gaussian, #00ffaa, 10, 0.6, 0, 0);
+            -fx-cursor: hand;
+            -fx-padding: 0;
+            -fx-min-width: 50;
+            -fx-min-height: 50;
+            -fx-pref-width: 50;
+            -fx-pref-height: 50;
+            -fx-max-width: 50;
+            -fx-max-height: 50;
+        }
+        .btn-green:pressed {
+            -fx-background-color: #00ffaa;
+            -fx-effect: dropshadow(gaussian, #00ffaa, 15, 0.7, 0, 0);
+        }
+
+        /* 🔴 Red */
+        .btn-red {
+            -fx-background-color: radial-gradient(center 50% 50%, radius 70%, #ff6666, #cc0000);
+            -fx-border-color: #ff4d4d;
+            -fx-border-width: 2;
+            -fx-background-radius: 25;
+            -fx-border-radius: 10;
+            -fx-shape: "M0,25 a25,25 0 1,0 50,0 a25,25 0 1,0 -50,0";
+            -fx-effect: dropshadow(gaussian, #ff4d4d, 10, 0.6, 0, 0);
+            -fx-cursor: hand;
+            -fx-padding: 0;
+            -fx-min-width: 50;
+            -fx-min-height: 50;
+            -fx-pref-width: 50;
+            -fx-pref-height: 50;
+            -fx-max-width: 50;
+            -fx-max-height: 50;
+        }
+        .btn-red:pressed {
+            -fx-background-color: #ff4d4d;
+            -fx-effect: dropshadow(gaussian, #ff4d4d, 15, 0.7, 0, 0);
+        }
+
+        /* 🔵 Blue */
+        .btn-blue {
+            -fx-background-color: radial-gradient(center 50% 50%, radius 70%, #66ccff, #0066cc);
+            -fx-border-color: #00bfff;
+            -fx-border-width: 2;
+            -fx-background-radius: 25;
+            -fx-border-radius: 10;
+            -fx-shape: "M0,25 a25,25 0 1,0 50,0 a25,25 0 1,0 -50,0";
+            -fx-effect: dropshadow(gaussian, #00bfff, 10, 0.6, 0, 0);
+            -fx-cursor: hand;
+            -fx-padding: 0;
+            -fx-min-width: 50;
+            -fx-min-height: 50;
+            -fx-pref-width: 50;
+            -fx-pref-height: 50;
+            -fx-max-width: 50;
+            -fx-max-height: 50;
+        }
+        .btn-blue:pressed {
+            -fx-background-color: #00bfff;
+            -fx-effect: dropshadow(gaussian, #00bfff, 15, 0.7, 0, 0);
+        }
+
+
+
+
+
+
+

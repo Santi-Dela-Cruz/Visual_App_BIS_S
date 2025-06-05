@@ -4,7 +4,6 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import utilities.Path;
 
@@ -23,9 +22,12 @@ public class Main extends Application {
         Parent root = loader.load();
 
         Scene scene = new Scene(root);
+        // Add this line to load your CSS
+        scene.getStylesheets().add(getClass().getResource(Path.FXML_STYLES).toExternalForm());
+
         stage.setTitle("Visualizador de Algoritmos de Ordenamiento");
         stage.setScene(scene);
-        stage.setResizable(false); // opcional: evitar redimensionamiento
+        stage.setResizable(false);
         stage.show();
     }
 }
