@@ -1,14 +1,10 @@
 package controller;
 
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
-import javafx.util.Duration;
 import model.*;
-
 import view.SortingAnimator;
 
 import java.util.ArrayList;
@@ -16,7 +12,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class PrincipalViewController {
-
     @FXML private Button btn_Bubble;
     @FXML private Button btn_Comenzar;
     @FXML private Button btn_Insertion;
@@ -25,19 +20,56 @@ public class PrincipalViewController {
     @FXML private TextArea txtBox_Ordenar;
     @FXML private Pane paneVisual;
 
+    private Button selectedButton = null;
+    private SortingAnimator animator;
     private String algoritmoSeleccionado = "";
+    private int[] datosPrevios = null;
 
     @FXML
     private void initialize() {
-        btn_Bubble.setOnAction(e -> algoritmoSeleccionado = "BubbleSort");
-        btn_Insertion.setOnAction(e -> algoritmoSeleccionado = "InsertionSort");
-        btn_Selection.setOnAction(e -> algoritmoSeleccionado = "SelectionSort");
+        btn_Bubble.setOnAction(e -> {
+            selectSortButton(btn_Bubble);
+            algoritmoSeleccionado = "BubbleSort";
+        });
+        btn_Selection.setOnAction(e -> {
+            selectSortButton(btn_Selection);
+            algoritmoSeleccionado = "SelectionSort";
+        });
+        btn_Insertion.setOnAction(e -> {
+            selectSortButton(btn_Insertion);
+            algoritmoSeleccionado = "InsertionSort";
+        });
         btn_Comenzar.setOnAction(e -> ejecutarOrdenamiento());
     }
 
-    private void ejecutarOrdenamiento() {
-        System.out.println("Ejecutando Ordenamiento");
+    public void setAnimator(SortingAnimator animator) {
+        this.animator = animator;
+    }
 
+    @FXML private void onStopClicked() {
+        if (animator != null) animator.stop();
+    }
+
+    @FXML private void onBackClicked() {
+        if (animator != null) animator.previousStep();
+    }
+
+    @FXML private void onNextClicked() {
+        if (animator != null) animator.nextStep();
+    }
+
+    @FXML private void onPlayClicked() {
+        if (animator != null) animator.play();
+    }
+
+    private void selectSortButton(Button btn) {
+        if (selectedButton != null) selectedButton.getStyleClass().remove("selected");
+        if (!btn.getStyleClass().contains("selected")) btn.getStyleClass().add("selected");
+        selectedButton = btn;
+    }
+
+    private void ejecutarOrdenamiento() {
+        txtBox_Ordenar.clear();
         String entrada = txtBox_Datos.getText();
         if (entrada == null || entrada.isBlank()) {
             txtBox_Ordenar.setText("Por favor, ingrese datos para ordenar.");
@@ -54,42 +86,32 @@ public class PrincipalViewController {
             return;
         }
 
-        int[] datosOriginales = Arrays.copyOf(datos, datos.length); // ✅ Se guarda el estado original
+        boolean mismosDatos = Arrays.equals(datos, datosPrevios);
+        if (!mismosDatos) {
+            datosPrevios = Arrays.copyOf(datos, datos.length);
+            int[] datosOriginales = Arrays.copyOf(datos, datos.length);
+            List<String> pasos = new ArrayList<>();
+            List<SortingStep> animsteps = new ArrayList<>();
 
-        List<String> pasos = new ArrayList<>();
-        List<SortingStep> animsteps = new ArrayList<>();
+            SortingAlgorithm algoritmo = switch (algoritmoSeleccionado) {
+                case "BubbleSort" -> new BubbleSort();
+                case "InsertionSort" -> new InsertionSort();
+                case "SelectionSort" -> new SelectionSort();
+                default -> null;
+            };
 
-        SortingAlgorithm algoritmo = switch (algoritmoSeleccionado) {
-            case "BubbleSort" -> new BubbleSort();
-            case "InsertionSort" -> new InsertionSort();
-            case "SelectionSort" -> new SelectionSort();
-            default -> null;
-        };
+            if (algoritmo == null) {
+                txtBox_Ordenar.setText("Por favor, seleccione un algoritmo de ordenamiento.");
+                return;
+            }
 
-        if (algoritmo == null) {
-            txtBox_Ordenar.setText("Por favor, seleccione un algoritmo de ordenamiento.");
-            return;
+            algoritmo.sort(datos, pasos, animsteps);
+            this.animator = new SortingAnimator(paneVisual, datosOriginales, txtBox_Ordenar);
+            animator.setSteps(animsteps);
+            animator.play();
+        } else if (animator != null) {
+            // Si los datos son los mismos y el animator ya existe, simplemente reanudar
+            animator.play();
         }
-
-        algoritmo.sort(datos, pasos, animsteps);
-
-        SortingAnimator animator = new SortingAnimator(paneVisual, datosOriginales, txtBox_Ordenar); // ✅ Usamos el arreglo original
-        animator.playSteps(animsteps, txtBox_Ordenar);
-    }
-
-    // ⚠️ Ya no se usa directamente, pero puedes conservarlo si más adelante animas con Timeline
-    private void reproducirPasos(List<String> pasos) {
-        txtBox_Ordenar.clear();
-        Timeline timeline = new Timeline();
-        int delay = 500; // milisegundos entre líneas
-
-        for (int i = 0; i < pasos.size(); i++) {
-            final int index = i;
-            KeyFrame keyFrame = new KeyFrame(Duration.millis(delay * i), e ->
-                    txtBox_Ordenar.appendText(pasos.get(index) + "\n"));
-            timeline.getKeyFrames().add(keyFrame);
-        }
-
-        timeline.play();
     }
 }
