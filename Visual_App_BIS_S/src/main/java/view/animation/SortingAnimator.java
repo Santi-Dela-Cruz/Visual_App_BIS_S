@@ -7,6 +7,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
 import model.SortingStep;
+import view.components.VisualBlock;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -49,7 +50,7 @@ public class SortingAnimator {
         firstPlay = true;
         isPlaying = false;
         interrupted = false;
-        textLog.setLength(0); // clear saved log
+        textLog.setLength(0);
         if (timeline != null) {
             timeline.stop();
             timeline = null;

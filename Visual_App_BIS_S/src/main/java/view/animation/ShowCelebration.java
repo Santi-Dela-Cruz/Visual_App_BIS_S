@@ -15,9 +15,9 @@ public class ShowCelebration {
     public static void show(Pane parent) {
         Label completedLabel = new Label("¡Completado!");
         completedLabel.setFont(Font.font("Segoe UI", 36));
-        completedLabel.setTextFill(Color.web("#65a30d")); // Verde lima cálido
+        completedLabel.setTextFill(Color.web("#65a30d"));
         completedLabel.setStyle("-fx-effect: dropshadow(gaussian, #65a30d, 5, 0.8, 0, 0);");
-        completedLabel.setLayoutY(30); // Top of the panel
+        completedLabel.setLayoutY(30);
         parent.getChildren().add(completedLabel);
 
         Platform.runLater(() ->
@@ -42,10 +42,9 @@ public class ShowCelebration {
             ft.play();
         }
 
-        // Realzar aún más el mensaje tras unos segundos
         FadeTransition colorTransition = new FadeTransition(Duration.seconds(2.5), completedLabel);
         colorTransition.setOnFinished(e -> {
-            completedLabel.setTextFill(Color.web("#52b69a")); // Verde suave tipo pastel
+            completedLabel.setTextFill(Color.web("#52b69a"));
             completedLabel.setStyle("-fx-effect: dropshadow(gaussian, #52b69a, 10, 0.8, 0, 0);");
         });
         colorTransition.play();
